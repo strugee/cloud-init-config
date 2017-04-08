@@ -1,0 +1,90 @@
+Content-Type: multipart/mixed; boundary="===============5302194000820845680=="
+MIME-Version: 1.0
+
+--===============5302194000820845680==
+Content-Type: text/cloud-config; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="apt-update.txt"
+
+#cloud-config
+
+# Update APT databases on first boot
+
+package_update: true
+
+--===============5302194000820845680==
+Content-Type: text/cloud-config; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="apt-upgrade.txt"
+
+#cloud-config
+
+# Always upgrade packages on first boot
+# Duh?
+
+package_upgrade: true
+
+--===============5302194000820845680==
+Content-Type: text/cloud-config; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="create-user.txt"
+
+#cloud-config
+
+# Create a default user for myself
+
+# Default password is `password`
+
+users:
+  - name: alex
+    gecos: Alex Jordan
+    groups: sudo
+    ssh-authorized-key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgLinJGG/NaGbMMq8HmLHw+LkxOC6oxu96nUucwjhbFaK0D+FjDLQPN51s3FiwlyX1AduXdFsI2cr7xHDc6eaTpf50B34uP6QkkQ5PofXTw7bdsH0W2j8ekammnvbKyo3AjoR4KuIW1ke8Nr0fH3e99X1hDRtJ57rKynDIKALea17QtzySFV7gX+1bp59PhJKETLpq7Qdvrw98ZXZh1RTG90bL6Zi3BvvDBghoG5OwSe/2IRAnDwbtSHXBmsP7eRparcPAFp40TppOhtDLf5Sp3u4GohFCRn7BPtpBme0S/pi7+EWUPN2j818BklYAsqw1qd+dv3OvQp+v1SDACHH7 alex@strugee.net
+    passwd: $6$rounds=4096$O5M/ljATy9c$myEPp09j2IE4qHmrGHEJ5yQDYhBeI9vXus.G73fXVGUm/dF.IdyGLEUkOoJ07p8uJGlvuUhiV8glS1x/1iJRh1
+    lock-passwd: true
+    shell: /usr/bin/zsh
+
+--===============5302194000820845680==
+Content-Type: text/cloud-config; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="install-packages.txt"
+
+#cloud-config
+
+# Install additional packages I expect/require to be available.
+
+packages:
+ - git
+ - emacs
+ - curl
+ - zsh
+ - moreutils
+ - pv
+ - sl
+ - nano
+ - sudo
+ - build-essential
+ - needrestart
+ - debian-goodies
+ - unattended-upgrades
+
+--===============5302194000820845680==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="provision-dotfiles.txt"
+
+#cloud-init
+
+# Autoclone dotfiles repo and run configctl to provision the environment
+
+# TODO verify GPG signatures here
+
+runcmd:
+  - [ sudo, -u, alex, sh, -c, \"cd ~ && git clone https://github.com/strugee/dots.git configs && cd configs && ./configctl\" ]
+
+--===============5302194000820845680==--
