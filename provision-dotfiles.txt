@@ -1,4 +1,4 @@
-#cloud-init
+#cloud-config
 
 # Autoclone dotfiles repo and run configctl to provision the environment
 
