@@ -4,6 +4,8 @@
 
 # Default password is `password`
 
+# TODO the authorized_keys thing doesn't actually produce a valid config file...
+
 users:
   - name: alex
     gecos: Alex Jordan
