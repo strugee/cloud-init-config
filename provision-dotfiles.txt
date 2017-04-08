@@ -1,0 +1,8 @@
+#cloud-init
+
+# Autoclone dotfiles repo and run configctl to provision the environment
+
+# TODO verify GPG signatures here
+
+runcmd:
+  - [ sudo, -u, alex, sh, -c, \"cd ~ && git clone https://github.com/strugee/dots.git configs && cd configs && ./configctl\" ]

@@ -1,0 +1,5 @@
+#cloud-config
+
+# Update APT databases on first boot
+
+package_update: true

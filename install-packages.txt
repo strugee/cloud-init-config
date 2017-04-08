@@ -1,0 +1,18 @@
+#cloud-config
+
+# Install additional packages I expect/require to be available.
+
+packages:
+ - git
+ - emacs
+ - curl
+ - zsh
+ - moreutils
+ - pv
+ - sl
+ - nano
+ - sudo
+ - build-essential
+ - needrestart
+ - debian-goodies
+ - unattended-upgrades

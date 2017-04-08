@@ -1,0 +1,6 @@
+#cloud-config
+
+# Always upgrade packages on first boot
+# Duh?
+
+package_upgrade: true
