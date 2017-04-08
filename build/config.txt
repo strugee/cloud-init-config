@@ -85,6 +85,6 @@ Content-Disposition: attachment; filename="provision-dotfiles.txt"
 # TODO verify GPG signatures here
 
 runcmd:
-  - [ sudo, -u, alex, sh, -c, \"cd ~ && git clone https://github.com/strugee/dots.git configs && cd configs && ./configctl\" ]
+  - [ sudo, -u, alex, sh, -c, "cd ~ && git clone https://github.com/strugee/dots.git configs && cd configs && ./configctl" ]
 
 --===============6701123151400643342==--
