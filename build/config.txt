@@ -1,7 +1,7 @@
-Content-Type: multipart/mixed; boundary="===============5302194000820845680=="
+Content-Type: multipart/mixed; boundary="===============6163537114186530797=="
 MIME-Version: 1.0
 
---===============5302194000820845680==
+--===============6163537114186530797==
 Content-Type: text/cloud-config; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -13,7 +13,7 @@ Content-Disposition: attachment; filename="apt-update.txt"
 
 package_update: true
 
---===============5302194000820845680==
+--===============6163537114186530797==
 Content-Type: text/cloud-config; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -26,7 +26,7 @@ Content-Disposition: attachment; filename="apt-upgrade.txt"
 
 package_upgrade: true
 
---===============5302194000820845680==
+--===============6163537114186530797==
 Content-Type: text/cloud-config; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -47,7 +47,7 @@ users:
     lock-passwd: true
     shell: /usr/bin/zsh
 
---===============5302194000820845680==
+--===============6163537114186530797==
 Content-Type: text/cloud-config; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -72,7 +72,7 @@ packages:
  - debian-goodies
  - unattended-upgrades
 
---===============5302194000820845680==
+--===============6163537114186530797==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -87,4 +87,4 @@ Content-Disposition: attachment; filename="provision-dotfiles.txt"
 runcmd:
   - [ sudo, -u, alex, sh, -c, \"cd ~ && git clone https://github.com/strugee/dots.git configs && cd configs && ./configctl\" ]
 
---===============5302194000820845680==--
+--===============6163537114186530797==--
