@@ -42,7 +42,7 @@ users:
   - name: alex
     gecos: Alex Jordan
     groups: sudo
-    ssh-authorized-key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgLinJGG/NaGbMMq8HmLHw+LkxOC6oxu96nUucwjhbFaK0D+FjDLQPN51s3FiwlyX1AduXdFsI2cr7xHDc6eaTpf50B34uP6QkkQ5PofXTw7bdsH0W2j8ekammnvbKyo3AjoR4KuIW1ke8Nr0fH3e99X1hDRtJ57rKynDIKALea17QtzySFV7gX+1bp59PhJKETLpq7Qdvrw98ZXZh1RTG90bL6Zi3BvvDBghoG5OwSe/2IRAnDwbtSHXBmsP7eRparcPAFp40TppOhtDLf5Sp3u4GohFCRn7BPtpBme0S/pi7+EWUPN2j818BklYAsqw1qd+dv3OvQp+v1SDACHH7 alex@strugee.net"
+    ssh-authorized-keys: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgLinJGG/NaGbMMq8HmLHw+LkxOC6oxu96nUucwjhbFaK0D+FjDLQPN51s3FiwlyX1AduXdFsI2cr7xHDc6eaTpf50B34uP6QkkQ5PofXTw7bdsH0W2j8ekammnvbKyo3AjoR4KuIW1ke8Nr0fH3e99X1hDRtJ57rKynDIKALea17QtzySFV7gX+1bp59PhJKETLpq7Qdvrw98ZXZh1RTG90bL6Zi3BvvDBghoG5OwSe/2IRAnDwbtSHXBmsP7eRparcPAFp40TppOhtDLf5Sp3u4GohFCRn7BPtpBme0S/pi7+EWUPN2j818BklYAsqw1qd+dv3OvQp+v1SDACHH7 alex@strugee.net"
     passwd: $6$rounds=4096$O5M/ljATy9c$myEPp09j2IE4qHmrGHEJ5yQDYhBeI9vXus.G73fXVGUm/dF.IdyGLEUkOoJ07p8uJGlvuUhiV8glS1x/1iJRh1
     lock-passwd: true
     shell: /usr/bin/zsh
